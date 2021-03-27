@@ -31,5 +31,5 @@ jobs:
       run: altwalker offline -m models/default.json "random(vertex_coverage(100))" -f steps/steps.json
       shell: bash
     - name: Run a pre-generated sequence
-      run: altwalker walk tests steps.json
+      run: altwalker walk tests steps/steps.json
       shell: bash

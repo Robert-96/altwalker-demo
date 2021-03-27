@@ -39,5 +39,5 @@ $ altwalker offline -m models/default.json "random(vertex_coverage(100))" -f ste
 Run the sequence of steps generated with the `offline` command:
 
 ```
-$ altwalker walk tests steps.json
+$ altwalker walk tests steps/steps.json
 ```
