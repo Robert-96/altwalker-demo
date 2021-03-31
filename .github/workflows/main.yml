@@ -33,3 +33,9 @@ jobs:
     - name: Run a pre-generated sequence
       run: altwalker walk tests steps/steps.json
       shell: bash
+    - name: Archive log files
+      uses: actions/upload-artifact@v2
+      if: ${{ always() }}
+      with:
+        name: logs
+        path: '*.log'
