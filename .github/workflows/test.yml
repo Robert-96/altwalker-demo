@@ -9,8 +9,14 @@ jobs:
 
     - name: Setup AltWalker
       uses: altwalker/setup-altwalker@main
-      with:
-        altwalker-version: '0.4.0'
+    
+    - name: Install pip requirements
+      run: | 
+        pip install -r requirements.txt 
+
+    - name: Print AltWalker version 
+      run: | 
+        altwalker --version 
       
     - name: Check the models
       run: altwalker check -m models/default.json "random(vertex_coverage(100))"
